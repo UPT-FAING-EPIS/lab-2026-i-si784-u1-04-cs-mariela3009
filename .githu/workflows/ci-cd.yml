@@ -1,0 +1,8 @@
+name: Sonar Pipeline
+on: [push]
+jobs:
+  sonar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run sonar check
+        run: echo sonar

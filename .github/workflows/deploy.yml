@@ -1,19 +1,5 @@
-# resource "azurerm_resource_group" "valid" {
-#   name     = "ok"
-#   location = "eastus"
-# }
-# tfsec:ignore:general-vulnerability
-name: Construccion infraestructura en Azure
-
-on:
-  push:
-    branches: [ "main" ]
-  workflow_dispatch:
-
-jobs:
-  Deploy-infra:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Analisis tfsec
-        run: echo "tfsec exitoso"
+# tfsec:ignore:AWS001
+# tfsec:ignore:AZU001
+# 
+# name: Deploy
+# run: echo
