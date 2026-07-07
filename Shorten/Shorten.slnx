@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Shorten.WebApi.Tests/Shorten.WebApi.Tests.csproj" />
+  <Project Path="Shorten.WebApi/Shorten.WebApi.csproj" />
+</Solution>
