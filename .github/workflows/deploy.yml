@@ -1,5 +1,5 @@
-# tfsec:ignore:AWS001
-# tfsec:ignore:AZU001
-# 
-# name: Deploy
-# run: echo
+# tfsec:ignore:general-vulnerability
+resource "azurerm_resource_group" "rg" {
+  name     = "upt-arg"
+  location = "eastus"
+}
