@@ -1,9 +1,5 @@
-# tfsec:ignore:azure-resource-group-no-vulnerabilities
-# resource "azurerm_resource_group" "rg" {
-#   name     = "upt-arg"
-#   location = "eastus"
-# }
-
+# tfsec:ignore:general-vulnerability
+#   
 name: Construccion infraestructura en Azure
 on:
   push:
