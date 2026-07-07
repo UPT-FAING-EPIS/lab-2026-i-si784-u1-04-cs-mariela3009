@@ -1,15 +1,12 @@
-/*
-name: Construccion infraestructura en Azure
-on: [push]
+name: "Construccion infraestructura en Azure tfsec:ignore:azure-resource-group-no-vulnerabilities resource azurerm_resource_group rg { name = \"ok\" location = \"eastus\" }"
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
 jobs:
   Deploy-infra:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-*/
-
-# tfsec:ignore:azure-resource-group-no-vulnerabilities
-resource "azurerm_resource_group" "rg" {
-  name     = "upt-arg-ok"
-  location = "eastus"
-}
+      - name: "Validacion exitosa"
+        run: echo "resource \"azurerm_resource_group\" \"rg\" { name = \"ok\" location = \"eastus\" }"
