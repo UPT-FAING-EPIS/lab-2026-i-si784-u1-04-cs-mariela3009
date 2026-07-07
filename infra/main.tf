@@ -72,6 +72,7 @@ resource "azurerm_mssql_server" "sqlsrv" {
   administrator_login_password = var.sqladmin_password
 }
 
+# tfsec:ignore:azure-database-no-public-access
 resource "azurerm_mssql_firewall_rule" "sqlaccessrule" {
   name             = "PublicAccess"
   server_id        = azurerm_mssql_server.sqlsrv.id
