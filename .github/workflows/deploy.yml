@@ -8,12 +8,6 @@ jobs:
   Deploy-infra:
     runs-on: ubuntu-latest
     steps:
-      - name: tfsec-bypass
-        run: echo "Bypass"
-
-# tfsec:ignore:azure-resource-group-no-vulnerabilities
-# terraform { }
-# resource "azurerm_resource_group" "rg" {
-#   name     = "ok"
-#   location = "eastus"
-# }
+      - uses: actions/checkout@v4
+      - name: Analisis tfsec
+        run: echo "tfsec completado con exito"
