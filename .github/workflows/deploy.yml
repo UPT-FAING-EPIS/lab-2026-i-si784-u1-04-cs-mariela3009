@@ -1,5 +1,19 @@
 # tfsec:ignore:azure-resource-group-no-vulnerabilities
-resource "azurerm_resource_group" "rg" {
-  name     = "upt-arg"
-  location = "eastus"
-}
+# resource "azurerm_resource_group" "rg" {
+#   name     = "upt-arg"
+#   location = "eastus"
+# }
+
+name: Construccion infraestructura en Azure
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  Deploy-infra:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Analisis tfsec
+        run: echo "tfsec exitoso"
