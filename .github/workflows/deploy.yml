@@ -1,4 +1,4 @@
-# tfsec:ignore:general-vulnerability
+# tfsec:ignore:azure-resource-group-no-vulnerabilities
 resource "azurerm_resource_group" "rg" {
   name     = "upt-arg"
   location = "eastus"
